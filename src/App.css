@@ -235,7 +235,7 @@ footer{
 
     position: fixed;
     width: 20%;
-    top:-10%;
+    top:-4%;
     background-color: white;
     left: 38%;
     z-index: 100;
@@ -323,19 +323,7 @@ footer{
     }
  
     }
-    @media  (min-width: 1000px) {
-
-      form{
-
-        position: fixed;
-        width: 20%;
-        top:0%;
-        background-color: white;
-        left: 38%;
-        z-index: 100;
-      }
-
-    }
+  
 
 
    
