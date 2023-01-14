@@ -54,13 +54,7 @@ function App() {
           <UserList userList={userList} on={on} selectUser={selectUser} getUsers={getUsers} />
         </div>
       </div>
-      <footer>
-      &copy; Desarrollado por José vargas Arango
-  
-      <div className='logoFutter'><i class='bx bxl-gmail' ></i> <i class='bx bxl-instagram-alt' ></i> <i class='bx bxl-twitter' ></i></div>
-      
-
-      </footer>
+     
 
     </div>
   )
