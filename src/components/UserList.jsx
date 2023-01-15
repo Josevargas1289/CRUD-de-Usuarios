@@ -27,12 +27,16 @@ const UserList = ({ userList, on, selectUser,getUsers }) => {
                         <li className='card-users' key={user.id}>
                             <h1 className='title-user-data'>User Data</h1>
                             <br />
+                            <hr />
+                            <br />
                             <ul>
                                 <li><b>First Name: </b>{user.first_name}</li>
                                 <li><b>Last Name: </b>{user.last_name}</li>
                                 <li><b>Email: </b>{user.email}</li>
                                 <li><b>Password: </b>{user.password}</li>
                                 <li><b>Birthday: </b>{user.birthday}</li>
+                                <br />
+                                <hr />
                             </ul>
                             <div className='container-btn'>
                                 <button onClick={()=>selectUser(user)} className='button'><i className='bx bx-edit' ></i></button>
