@@ -150,10 +150,11 @@ form:hover{
   justify-content: center;
   justify-items: center;
   align-content: center;
+  flex-direction: column;
   width: 100%;
   gap: 1.5rem;
   margin-top: 8rem;
-  flex-direction: column;
+ 
  
   
   
@@ -177,7 +178,7 @@ form:hover{
   border-radius: 10px;
   border: 1px solid black;
   box-shadow: 1px 0px 10px 0px black;
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
 
 }
 
