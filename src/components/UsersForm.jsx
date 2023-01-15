@@ -29,6 +29,7 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
                 getUsers();
                 selectUser(null)
                 reset(emtyUser); 
+                mostrarFormUser()
                 
             })
 
@@ -37,9 +38,9 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
             .then((res) => {
                  getUsers();
                  reset(emtyUser);
-       
+                 mostrarFormUser()
 
-                
+    
                 });    
         }
         
@@ -102,7 +103,7 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
                         {...register("birthday")}
                     />
                 </div>
-                <button className='button-submit'><i className='bx bxs-send' ></i> Submit</button>
+                <button  className='button-submit'><i className='bx bxs-send' ></i> Submit</button>
 
             </form>
 

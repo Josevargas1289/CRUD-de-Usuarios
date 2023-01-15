@@ -9,13 +9,15 @@ const UserList = ({ userList, on, selectUser,getUsers }) => {
         axios.delete(`https://users-crud.academlo.tech/users/${user.id}/`)
         .then(()=>getUsers())
     }
-    
+  
   
 
     return (
         <div>
+       
     
         <div className='container-user-list'>
+        <h1 className='totalList'>{`Usuarios Registrados:${OrderUser.length}`}</h1>
             
             <ul >
                 <div className= {on ? 'slider' : 'slider-of'}>
