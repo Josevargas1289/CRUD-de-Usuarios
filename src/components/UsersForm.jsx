@@ -58,24 +58,6 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
             <div onClick={()=>mostrarFormUser(reset(emtyUser))} className='button-close-form'><i className='bx bxs-user-x' ></i></div>
 
                 <hr />
-                <div className='input-container'>
-                    <label htmlFor="email"> <i className='bx bxs-envelope'></i> Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        {...register("email")}
-                    />
-                </div>
-
-                <div className='input-container'>
-                    <label htmlFor="password"> <i className='bx bxs-key'></i> Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        {...register("password")}
-                    />
-                </div>
-
 
                 <div className='input-container'>
                     <label htmlFor="first_name"> <i className='bx bxs-user'></i>  First Name</label>
@@ -94,6 +76,28 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
                         {...register("last_name")}
                     />
                 </div>
+                <div className='input-container'>
+                    <label htmlFor="email"> <i className='bx bxs-envelope'></i> Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        {...register("email")}
+                    />
+                </div>
+
+              
+
+                <div className='input-container'>
+                    <label htmlFor="password"> <i className='bx bxs-key'></i> Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        {...register("password")}
+                    />
+                </div>
+
+
+               
 
                 <div className='input-container'>
                     <label htmlFor="birthday"> <i className='bx bxs-party' ></i> Birthday</label>

@@ -7,7 +7,7 @@
   left: 0;
   top: 0;
   right: 0;
-  padding: 20px;
+  padding: 30px;
   background: #4e4d7a; /* Old browsers */
   background: -moz-linear-gradient(left, rgb(105, 46, 215) 0%, #8d82a9 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #2a63ad 0%,#3979e7 100%); /* Chrome10-25,Safari5.1-6 */
@@ -245,10 +245,6 @@ form:hover{
     flex-direction: column;
     width: 70%;
     height: 250px;
-    
-    
-   
-   
   }
   input{
     height: 20px;
@@ -275,6 +271,7 @@ form:hover{
        font-weight: bold;
        border-radius: .5rem;
        transition: all 300ms;
+       font-size: 20px;
        
      }
      .header{

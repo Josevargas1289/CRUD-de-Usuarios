@@ -47,7 +47,7 @@ function App() {
       
         <div className='header'>
           <h1> <i className='bx bxs-user-circle' ></i> CRUD´S</h1>
-          <button onClick={mostrarFormUser} className='btn-header'>Create User</button>
+          <button onClick={mostrarFormUser} className='btn-header'><i className='bx bxs-user-plus'></i>Create User</button>
         </div>
         <div className='container-app'> 
           <UsersForm getUsers={getUsers} on={on} mostrarFormUser={mostrarFormUser} userSelected={userSelected} selectUser={selectUser} />
