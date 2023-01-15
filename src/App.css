@@ -181,9 +181,7 @@ form:hover{
 
 }
 
-.card-users:hover{
--webkit-transform:scale(1.3);transform:scale(1.05);
-}
+
 
 .title-user-data {
   text-align: center;
