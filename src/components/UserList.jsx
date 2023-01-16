@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const UserList = ({ userList, on, selectUser,getUsers }) => {
     const OrderUser = userList.sort((a,b)=>a.first_name.localeCompare(b.first_name))
-    // const [isLoading, setIsLoading]=useState(true)
+   
     const deleteuser=(user)=>{
         // alert(user.first_name)
         axios.delete(`https://users-crud.academlo.tech/users/${user.id}/`)
