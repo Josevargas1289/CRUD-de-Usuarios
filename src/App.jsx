@@ -11,7 +11,7 @@ function App() {
   const [userList, setUserList] = useState([])
   const [on, setOn] = useState(false);
   const [userSelected, setUserSelected]= useState(null)
-  const [isLoading, setIsLoading]= useState(true)
+ 
   useEffect(() => {
 
     axios.get('https://users-crud.academlo.tech/users/')

@@ -179,7 +179,8 @@ form:hover{
   border-radius: 10px;
   border: 1px solid black;
   box-shadow: 1px 0px 10px 0px black;
-  /* margin-left: 3rem; */
+  line-height: 22px;
+ 
 
 }
 
@@ -241,12 +242,13 @@ form:hover{
   .card-users{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 330px;
+    width: 82%;
+    height: 290px;
     border: 1px solid black;
     line-height: 25px;
     margin-left: 0;
     transition: all 500ms;
+    line-height: 25px;
   }
 .card-users:hover{
 -webkit-transform:scale(1.3);transform:scale(1.05);
@@ -296,14 +298,7 @@ form:hover{
   
      }
 
-     .slider{
-      padding: 3rem;
-      height: 100%;
-      background-color: rgba(128, 128, 128, 0.526);
-      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      
-
-     }
+    
      .slider-of{
       background-color: transparent;
       
