@@ -1,61 +1,66 @@
 import axios from 'axios';
-import React, { useState, useEffect, selectUser } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) => {
     const { handleSubmit, register, reset } = useForm()
 
-    
 
-    const emtyUser ={email: "",password: "", first_name: "", last_name: "", birthday: "" }
-  useEffect(()=> {
-   
-    if (userSelected) {
-        mostrarFormUser();
-        reset(userSelected)
-    }else{
-        reset(emtyUser)
- 
-    }
 
-  },[userSelected])
+    const emtyUser = { email: "", password: "", first_name: "", last_name: "", birthday: "" }
+
+    useEffect(() => {
+
+        if (userSelected) {
+
+            reset(userSelected)
+
+        } else {
+            reset(emtyUser)
+
+
+        }
+
+    }, [userSelected])
 
 
     const submit = (data) => {
         console.log(data);
         if (userSelected) {
-            axios.put(`https://users-crud.academlo.tech/users/${userSelected.id}/`,data)
-            .then(()=> {
-                getUsers();
-                selectUser(null)
-                reset(emtyUser); 
-                mostrarFormUser()
-                
-            })
+            axios.put(`https://users-crud.academlo.tech/users/${userSelected.id}/`, data)
+                .then(() => {
+                    getUsers();
+                    selectUser(null)
+                    reset(emtyUser);
+                    mostrarFormUser()
 
-        }else{
-        axios.post("https://users-crud.academlo.tech/users/", data)
-            .then((res) => {
-                 getUsers();
-                 reset(emtyUser);
-                 mostrarFormUser()
+                })
 
-    
-                });    
+        } else {
+            axios.post("https://users-crud.academlo.tech/users/", data)
+                .then((res) => {
+                    getUsers();
+                    reset(emtyUser);
+                    mostrarFormUser()
+
+
+
+                });
         }
-        
+
 
     };
+   
     // funcion para motsrar el form
 
     return (
 
         <div onSubmit={handleSubmit(submit)}>
 
-            
+
             <form className={on ? 'on' : 'off'} >
                 <h1 className='title-user'> Users Form</h1>
-            <div onClick={()=>mostrarFormUser(reset(emtyUser))} className='button-close-form'><i className='bx bxs-user-x' ></i></div>
+                <div onClick={() => mostrarFormUser()} className='button-close-form'><i className='bx bxs-user-x' ></i></div>
 
                 <hr />
 
@@ -85,7 +90,7 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
                     />
                 </div>
 
-              
+
 
                 <div className='input-container'>
                     <label htmlFor="password"> <i className='bx bxs-key'></i> Password</label>
@@ -97,7 +102,7 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
                 </div>
 
 
-               
+
 
                 <div className='input-container'>
                     <label htmlFor="birthday"> <i className='bx bxs-party' ></i> Birthday</label>
@@ -107,12 +112,12 @@ const UsersForm = ({ getUsers, on, mostrarFormUser, userSelected, selectUser }) 
                         {...register("birthday")}
                     />
                 </div>
-                <button  className='button-submit'><i className='bx bxs-send' ></i> Submit</button>
+                <button className='button-submit'><i className='bx bxs-send' ></i> Submit</button>
 
             </form>
 
 
-            </div>
+        </div>
 
     );
 };

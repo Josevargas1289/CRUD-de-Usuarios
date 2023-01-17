@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const UserList = ({ userList, on, selectUser, getUsers }) => {
+const UserList = ({ userList,  selectUser, getUsers, mostrarFormUser }) => {
     const OrderUser = userList.sort((a, b) => a.first_name.localeCompare(b.first_name))
 
     const deleteuser = (user) => {
@@ -17,6 +17,7 @@ const UserList = ({ userList, on, selectUser, getUsers }) => {
 
 
             <div className='container-user-list'>
+                
                 <h1 className='totalList'>{`Usuarios Registrados:${OrderUser.length}`}</h1>
 
                 <ul >
@@ -39,7 +40,7 @@ const UserList = ({ userList, on, selectUser, getUsers }) => {
                                             <hr />
                                         </ul>
                                         <div className='container-btn'>
-                                            <button onClick={() => selectUser(user)} className='button'><i className='bx bx-edit' ></i></button>
+                                            <button onClick={() =>  selectUser(user)} className='button'><i className='bx bx-edit' ></i></button>
                                             <button onClick={() => deleteuser(user)} className='button'><i className='bx bxs-trash-alt' ></i></button>
                                         </div>
 

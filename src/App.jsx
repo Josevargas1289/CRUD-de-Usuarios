@@ -11,20 +11,24 @@ function App() {
   const [userList, setUserList] = useState([])
   const [on, setOn] = useState(false);
   const [userSelected, setUserSelected]= useState(null)
+  
  
   useEffect(() => {
 
     axios.get('https://users-crud.academlo.tech/users/')
       .then((res) => setUserList(res.data))
-      setTimeout(()=>setIsLoading(false), 1000)
+    
+      
     
 
   }, [])
-  // console.log(userSelected);
+  console.log(userList);
+
 
   const getUsers = () => {
     axios.get('https://users-crud.academlo.tech/users/')
       .then((res) => setUserList(res.data))
+  
      
 
   }
@@ -36,8 +40,7 @@ function App() {
 
   const selectUser =(user)=>{
   setUserSelected(user);
-
-
+  mostrarFormUser(user);
   }
   
   return (
@@ -47,11 +50,11 @@ function App() {
       
         <div className='header'>
           <h1> <i className='bx bxs-user-circle' ></i> CRUD´S</h1>
-          <button onClick={mostrarFormUser} className='btn-header'><i className='bx bxs-user-plus'></i>Create User</button>
+          <button onClick={()=>mostrarFormUser(setUserSelected(""))} className='btn-header'><i className='bx bxs-user-plus'></i>Create User</button>
         </div>
         <div className='container-app'> 
           <UsersForm getUsers={getUsers} on={on} mostrarFormUser={mostrarFormUser} userSelected={userSelected} selectUser={selectUser} />
-          <UserList userList={userList} on={on} selectUser={selectUser} getUsers={getUsers} />
+          <UserList userList={userList} on={on} selectUser={selectUser} getUsers={getUsers} mostrarFormUser={mostrarFormUser} />
         </div>
       </div>
      
