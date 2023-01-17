@@ -22,7 +22,7 @@ function App() {
     
 
   }, [])
-  console.log(userList);
+  
 
 
   const getUsers = () => {
